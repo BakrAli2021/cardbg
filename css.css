@@ -15,7 +15,7 @@ body{
     position: relative;
     display: flex;
     -webkit-box-reflect:below  1px linear-gradient(transparent ,transparent, transparent,#444);
-    padding: 50px 0;
+    padding: 80px 0;
 
 }
 .container .box{

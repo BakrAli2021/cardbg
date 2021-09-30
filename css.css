@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #262626;
+}
+.container{
+    position: relative;
+    display: flex;
+    -webkit-box-reflect:below  1px linear-gradient(transparent ,transparent, transparent,#444);
+
+}
+.container .box{
+    position: relative;
+    width: 320px;
+    height: 400px;
+    background-color: #444;
+    margin: 0 20px;
+    border-radius: 20px; 
+    filter: grayscale(1);
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+.container .box:nth-of-type(1){
+    background: linear-gradient(45deg ,#2da2ff 25%,#444 25%,#444 50%,#2da2ff 50%,#2da2ff 75%,#444 75%,#444 100%); 
+     background-size: 40px 40px;}
+
+.container .box:nth-of-type(2){
+    background: linear-gradient(45deg ,#88218b 25%,#444 25%,#444 50%,#88218b 50%,#88218b 75%,#444 75%,#444 100%); 
+     background-size: 40px 40px;
+}
+.container .box:hover{
+     animation:  move 6s linear infinite;
+     filter: grayscale(0);
+}
+.container .box img{
+    position: absolute;
+    bottom: 0;
+    height: 90%;
+    transition: 1s;
+}
+.container .box:hover img{
+   height: 120%;
+}
+@keyframes move{
+0%{
+    background-position-y: 0;
+}
+100%{
+    background-position-y: 400px;
+}
+}
+@media (max-width:767px){
+    .container{
+        flex-direction: column;
+
+    }
+    .container .box{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+}
